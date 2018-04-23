@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Brand extends Eloquent
+class OptionsValue extends Eloquent
 {
 
     /**
@@ -9,6 +9,8 @@ class Brand extends Eloquent
      *
      * @var array
      */
+    protected $table = 'options_value';
+
     protected $guarded = [];
 
     /**

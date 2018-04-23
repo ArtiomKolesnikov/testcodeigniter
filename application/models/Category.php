@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Brand extends Eloquent
+class Category extends Eloquent
 {
 
     /**

@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Brand extends Eloquent
+class Option extends Eloquent
 {
 
     /**
@@ -9,6 +9,7 @@ class Brand extends Eloquent
      *
      * @var array
      */
+
     protected $guarded = [];
 
     /**

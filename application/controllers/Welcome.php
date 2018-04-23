@@ -2,6 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+use Symfony\Component\DomCrawler\Crawler;
 
 class Welcome extends CI_Controller {
 
@@ -22,8 +23,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-	    $this->load->model('brand');
-	    dd(Brand::all()->pluck('name'));
+
+	    include 'import_parf.php';
+
+        $import_xml = file_get_contents('import.xml');
+        $crawler = new Crawler($import_xml);
+//	    $this->load->model('brand');
+	    dd(var_dump($crawler));
 		$this->load->view('welcome_message');
 	}
 }
